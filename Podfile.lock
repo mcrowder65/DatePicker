@@ -1,16 +1,20 @@
 PODS:
+  - SwiftDate (6.1.0)
   - SwiftyPickerPopover (6.6.6)
 
 DEPENDENCIES:
+  - SwiftDate (~> 6.0)
   - SwiftyPickerPopover (~> 6.6.6)
 
 SPEC REPOS:
   trunk:
+    - SwiftDate
     - SwiftyPickerPopover
 
 SPEC CHECKSUMS:
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
   SwiftyPickerPopover: a402960a6687c911ffcb4e9fb282a1bc61186ab4
 
-PODFILE CHECKSUM: f0baad6a29dbe68b2f1836619b4a20dbe40b1677
+PODFILE CHECKSUM: 19c99f5a7af28b69be9e1e3304e48c1fb8e583f1
 
 COCOAPODS: 1.8.4

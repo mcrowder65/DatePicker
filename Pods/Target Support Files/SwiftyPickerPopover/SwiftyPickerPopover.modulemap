@@ -1,6 +1,0 @@
-module SwiftyPickerPopover {
-  umbrella header "SwiftyPickerPopover-umbrella.h"
-
-  export *
-  module * { export * }
-}
