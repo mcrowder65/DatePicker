@@ -11,13 +11,14 @@ import SwiftDate
 
 struct ContentView: View {
     @State var text: String = ""
-    @State var startDate: Date = Date()
-    @State var endDate: Date = Date()
+    @State var startDate: String = ""
+    @State var endDate: String = ""
     var body: some View {
         Form {
             Section {
                 Button("Hello!") {
-                    print(self.startDate)
+                    print("\(self.startDate) \(self.endDate)")
+                    
                 }
             }
             Section {

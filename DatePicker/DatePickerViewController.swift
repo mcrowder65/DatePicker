@@ -10,6 +10,7 @@ import UIKit
 import SwiftyPickerPopover
 import SwiftUI
 import SwiftDate
+
 class DatePickerViewController: UIViewController {
     @IBOutlet var label: UILabel!
     var labelText: String!
@@ -18,7 +19,7 @@ class DatePickerViewController: UIViewController {
     var valueText: String!
     
     var updateValue: (Date) -> Void = { _ in print("you didn't initialize updateValue!") }
-    
+    var clearValue: () -> Void = { print("you forgot to set clearValue!") }
     var optional: Bool = false
     private let dateFormat: String = "MM/dd/yy"
     func textToDate(_ text: String?) -> Date {
@@ -38,7 +39,7 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         label?.text = labelText
-        value?.text = optional ? "Optional" : valueText
+        value?.text = valueText
         value?.textColor = .gray
         view.backgroundColor = .white
         let gesture = UITapGestureRecognizer(target: self, action: #selector (self.someAction (_:)))
@@ -61,6 +62,7 @@ class DatePickerViewController: UIViewController {
             datePicker.setClearButton { (popover, _) in
                 self.value.text = "Optional"
                 self.value.textColor = .gray
+                self.clearValue()
                 popover.disappear()
             }
         }
@@ -71,18 +73,29 @@ class DatePickerViewController: UIViewController {
 
 struct DatePicker: UIViewControllerRepresentable {
     let label: String
-    @Binding var value: Date
+    @Binding var value: String
     
     var optional: Bool = false
     func makeUIViewController(context: UIViewControllerRepresentableContext<DatePicker>) -> UIViewController {
         let vc = DatePickerViewController()
         vc.labelText = label
         vc.optional = self.optional
-        let df = DateFormatter()
-        df.dateFormat = "MM/dd/yy"
-        vc.valueText = df.string(from: value)
+        if optional {
+            vc.valueText = "Optional"
+        } else if !optional && value == "" {
+            vc.valueText = Date().toFormat("MM/dd/yy")
+            value = Date().toFormat("MM/dd/yy")
+        } else {
+            vc.valueText = value
+        }
+        vc.clearValue = {
+            self.value = ""
+        }
         vc.updateValue = { date in
-            self.value = date
+            let df = DateFormatter()
+            df.dateFormat = "MM/dd/yy"
+            vc.valueText = df.string(from: date)
+            self.value = df.string(from: date)
         }
         return vc
     }
@@ -96,8 +109,10 @@ struct DatePicker: UIViewControllerRepresentable {
 }
 
 //extension DatePicker {
-//    init(label: String, value: Bind) {
+//
+//    init(label: String, value: Binding<String>, renderProp: (Date) -> String) {
 //        self.label = label
-//        self.value = .constant(Date())
+//        self._value = State(initialValue: renderProp(Date()))
+//        self.optional = false
 //    }
 //}
