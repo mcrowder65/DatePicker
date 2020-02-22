@@ -16,6 +16,8 @@ class DatePickerViewController: UIViewController {
     
     @IBOutlet weak var value: UILabel!
     var valueText: String!
+    
+    var updateValue: (Date) -> Void = { _ in print("you didn't initialize updateValue!") }
     private let dateFormat: String = "MM/dd/yyyy"
     func textToDate(_ text: String?) -> Date {
         let dateFormatter = DateFormatter()
@@ -49,6 +51,7 @@ class DatePickerViewController: UIViewController {
             .setSelectedDate(textToDate(value.text))
             .setDoneButton(action: { _, selectedDate in
                 self.value.text = self.dateToText(selectedDate)
+                self.updateValue(selectedDate)
             })
             .appear(originView: sender.view!, baseViewController: self)
     }
@@ -57,12 +60,16 @@ class DatePickerViewController: UIViewController {
 struct DatePicker: UIViewControllerRepresentable {
     let label: String
     @Binding var value: Date
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<DatePicker>) -> UIViewController {
         let vc = DatePickerViewController()
         vc.labelText = label
         let df = DateFormatter()
         df.dateFormat = "MM/dd/yyyy"
         vc.valueText = df.string(from: value)
+        vc.updateValue = { date in
+            self.value = date
+        }
         return vc
     }
     
