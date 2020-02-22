@@ -19,7 +19,8 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         label?.text = labelText
-        value?.text = valueText
+        value?.text = valueText == "" ? "Optional" : valueText
+        value?.textColor = valueText == "" ? .gray : value.textColor
         view.backgroundColor = .white
         let gesture = UITapGestureRecognizer(target: self, action: #selector (self.someAction (_:)))
         
@@ -29,7 +30,7 @@ class DatePickerViewController: UIViewController {
     }
     @objc func someAction(_ sender: UITapGestureRecognizer) {
         
-        DatePickerPopover(title: "DatePicker")
+        DatePickerPopover(title: self.labelText)
             .setDoneButton(action: { _, selectedDate in
                 print(selectedDate)
             })
@@ -54,4 +55,11 @@ struct DatePicker: UIViewControllerRepresentable {
     typealias UIViewControllerType = UIViewController
     
     
+}
+
+extension DatePicker {
+    init(label: String) {
+        self.label = label
+        self.value = ""
+    }
 }

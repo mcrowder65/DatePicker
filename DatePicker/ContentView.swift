@@ -11,6 +11,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var text: String = ""
+//    @State var startDate: Date
     var body: some View {
         Form {
             Section {
@@ -19,8 +20,8 @@ struct ContentView: View {
                 }
             }
             Section {
-//                DatePicker(label: "Start Date")
-                DatePicker(label: "End Date", value: "Optional")
+                DatePicker(label: "Start Date", value: "02/02/2020")
+                DatePicker(label: "End Date")
             }
 //            Section {
 //                DatePicker(label: "Start Date")
