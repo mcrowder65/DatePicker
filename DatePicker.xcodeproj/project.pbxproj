@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		97AA9D39CB5930709FEF504D /* libPods-DatePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6C1C239DB10B8787307221 /* libPods-DatePicker.a */; };
+		B98B67FD23FF51AA00DCD118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B67FC23FF51AA00DCD118 /* AppDelegate.swift */; };
+		B98B67FF23FF51AA00DCD118 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B67FE23FF51AA00DCD118 /* SceneDelegate.swift */; };
+		B98B680123FF51AA00DCD118 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B680023FF51AA00DCD118 /* ContentView.swift */; };
+		B98B680323FF51AB00DCD118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98B680223FF51AB00DCD118 /* Assets.xcassets */; };
+		B98B680623FF51AB00DCD118 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B98B680523FF51AB00DCD118 /* Preview Assets.xcassets */; };
+		B98B680923FF51AB00DCD118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98B680723FF51AB00DCD118 /* LaunchScreen.storyboard */; };
+		B98B681823FF5B2E00DCD118 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B681623FF5B2E00DCD118 /* DatePickerViewController.swift */; };
+		B98B681923FF5B2E00DCD118 /* DatePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B98B681723FF5B2E00DCD118 /* DatePickerViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E254A5E1FA17E8DCEB86461 /* Pods-DatePicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatePicker.release.xcconfig"; path = "Target Support Files/Pods-DatePicker/Pods-DatePicker.release.xcconfig"; sourceTree = "<group>"; };
+		78207B6CF43AAB2CE483755E /* Pods-DatePicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DatePicker.debug.xcconfig"; path = "Target Support Files/Pods-DatePicker/Pods-DatePicker.debug.xcconfig"; sourceTree = "<group>"; };
+		B98B67F923FF51AA00DCD118 /* DatePicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DatePicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B98B67FC23FF51AA00DCD118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B98B67FE23FF51AA00DCD118 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B98B680023FF51AA00DCD118 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B98B680223FF51AB00DCD118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B98B680523FF51AB00DCD118 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B98B680823FF51AB00DCD118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B98B680A23FF51AB00DCD118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B98B681623FF5B2E00DCD118 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		B98B681723FF5B2E00DCD118 /* DatePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerViewController.xib; sourceTree = "<group>"; };
+		CD6C1C239DB10B8787307221 /* libPods-DatePicker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DatePicker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B98B67F623FF51AA00DCD118 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				97AA9D39CB5930709FEF504D /* libPods-DatePicker.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93E7D176874625FD31B27313 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				78207B6CF43AAB2CE483755E /* Pods-DatePicker.debug.xcconfig */,
+				0E254A5E1FA17E8DCEB86461 /* Pods-DatePicker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B98B67F023FF51AA00DCD118 = {
+			isa = PBXGroup;
+			children = (
+				B98B67FB23FF51AA00DCD118 /* DatePicker */,
+				B98B67FA23FF51AA00DCD118 /* Products */,
+				93E7D176874625FD31B27313 /* Pods */,
+				F0CC485A9E5723E78A89630D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B98B67FA23FF51AA00DCD118 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B98B67F923FF51AA00DCD118 /* DatePicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B98B67FB23FF51AA00DCD118 /* DatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				B98B67FC23FF51AA00DCD118 /* AppDelegate.swift */,
+				B98B67FE23FF51AA00DCD118 /* SceneDelegate.swift */,
+				B98B680023FF51AA00DCD118 /* ContentView.swift */,
+				B98B680223FF51AB00DCD118 /* Assets.xcassets */,
+				B98B680723FF51AB00DCD118 /* LaunchScreen.storyboard */,
+				B98B680A23FF51AB00DCD118 /* Info.plist */,
+				B98B680423FF51AB00DCD118 /* Preview Content */,
+				B98B681623FF5B2E00DCD118 /* DatePickerViewController.swift */,
+				B98B681723FF5B2E00DCD118 /* DatePickerViewController.xib */,
+			);
+			path = DatePicker;
+			sourceTree = "<group>";
+		};
+		B98B680423FF51AB00DCD118 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B98B680523FF51AB00DCD118 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F0CC485A9E5723E78A89630D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD6C1C239DB10B8787307221 /* libPods-DatePicker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B98B67F823FF51AA00DCD118 /* DatePicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B98B680D23FF51AB00DCD118 /* Build configuration list for PBXNativeTarget "DatePicker" */;
+			buildPhases = (
+				B3418E9FA90F8593A6F16DF0 /* [CP] Check Pods Manifest.lock */,
+				B98B67F523FF51AA00DCD118 /* Sources */,
+				B98B67F623FF51AA00DCD118 /* Frameworks */,
+				B98B67F723FF51AA00DCD118 /* Resources */,
+				120FD8C814956C875AD25545 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DatePicker;
+			productName = DatePicker;
+			productReference = B98B67F923FF51AA00DCD118 /* DatePicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B98B67F123FF51AA00DCD118 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Matt;
+				TargetAttributes = {
+					B98B67F823FF51AA00DCD118 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = B98B67F423FF51AA00DCD118 /* Build configuration list for PBXProject "DatePicker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B98B67F023FF51AA00DCD118;
+			productRefGroup = B98B67FA23FF51AA00DCD118 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B98B67F823FF51AA00DCD118 /* DatePicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B98B67F723FF51AA00DCD118 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98B681923FF5B2E00DCD118 /* DatePickerViewController.xib in Resources */,
+				B98B680923FF51AB00DCD118 /* LaunchScreen.storyboard in Resources */,
+				B98B680623FF51AB00DCD118 /* Preview Assets.xcassets in Resources */,
+				B98B680323FF51AB00DCD118 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		120FD8C814956C875AD25545 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatePicker/Pods-DatePicker-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DatePicker/Pods-DatePicker-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DatePicker/Pods-DatePicker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3418E9FA90F8593A6F16DF0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DatePicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B98B67F523FF51AA00DCD118 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98B681823FF5B2E00DCD118 /* DatePickerViewController.swift in Sources */,
+				B98B67FD23FF51AA00DCD118 /* AppDelegate.swift in Sources */,
+				B98B67FF23FF51AA00DCD118 /* SceneDelegate.swift in Sources */,
+				B98B680123FF51AA00DCD118 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B98B680723FF51AB00DCD118 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B98B680823FF51AB00DCD118 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B98B680B23FF51AB00DCD118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B98B680C23FF51AB00DCD118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B98B680E23FF51AB00DCD118 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78207B6CF43AAB2CE483755E /* Pods-DatePicker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DatePicker/Preview Content\"";
+				DEVELOPMENT_TEAM = K3B8L56Y75;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DatePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matt.DatePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B98B680F23FF51AB00DCD118 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E254A5E1FA17E8DCEB86461 /* Pods-DatePicker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DatePicker/Preview Content\"";
+				DEVELOPMENT_TEAM = K3B8L56Y75;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DatePicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.matt.DatePicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B98B67F423FF51AA00DCD118 /* Build configuration list for PBXProject "DatePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B98B680B23FF51AB00DCD118 /* Debug */,
+				B98B680C23FF51AB00DCD118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B98B680D23FF51AB00DCD118 /* Build configuration list for PBXNativeTarget "DatePicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B98B680E23FF51AB00DCD118 /* Debug */,
+				B98B680F23FF51AB00DCD118 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B98B67F123FF51AA00DCD118 /* Project object */;
+}

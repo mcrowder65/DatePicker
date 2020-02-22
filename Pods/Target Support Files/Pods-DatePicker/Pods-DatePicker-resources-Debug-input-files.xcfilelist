@@ -1,0 +1,10 @@
+${PODS_ROOT}/Target Support Files/Pods-DatePicker/Pods-DatePicker-resources.sh
+${PODS_ROOT}/SwiftyPickerPopover/SwiftyPickerPopover/AbstractPopover.storyboard
+${PODS_ROOT}/SwiftyPickerPopover/SwiftyPickerPopover/Base.lproj/CountdownPickerPopover.storyboard
+${PODS_ROOT}/SwiftyPickerPopover/SwiftyPickerPopover/Base.lproj/DatePickerPopover.storyboard
+${PODS_ROOT}/SwiftyPickerPopover/SwiftyPickerPopover/Base.lproj/Localizable.strings
+${PODS_ROOT}/SwiftyPickerPopover/SwiftyPickerPopover/Base.lproj/StringPickerPopover.storyboard
+${PODS_ROOT}/SwiftyPickerPopover/SwiftyPickerPopover/ColumnStringPickerPopover.storyboard
+${PODS_ROOT}/SwiftyPickerPopover/SwiftyPickerPopover/ja.lproj/CountdownPickerPopover.strings
+${PODS_ROOT}/SwiftyPickerPopover/SwiftyPickerPopover/ja.lproj/DatePickerPopover.strings
+${PODS_ROOT}/SwiftyPickerPopover/SwiftyPickerPopover/ja.lproj/Localizable.strings
