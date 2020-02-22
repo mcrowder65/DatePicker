@@ -12,6 +12,7 @@ import SwiftDate
 struct ContentView: View {
     @State var text: String = ""
     @State var startDate: Date = Date()
+    @State var endDate: Date = Date()
     var body: some View {
         Form {
             Section {
@@ -21,7 +22,7 @@ struct ContentView: View {
             }
             Section {
                 DatePicker(label: "Start Date", value: $startDate)
-//                DatePicker(label: "End Date")
+                DatePicker(label: "End Date", value: $endDate, optional: true)
             }
 //            Section {
 //                DatePicker(label: "Start Date")

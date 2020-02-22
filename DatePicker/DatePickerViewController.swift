@@ -18,14 +18,16 @@ class DatePickerViewController: UIViewController {
     var valueText: String!
     
     var updateValue: (Date) -> Void = { _ in print("you didn't initialize updateValue!") }
-    private let dateFormat: String = "MM/dd/yyyy"
+    
+    var optional: Bool = false
+    private let dateFormat: String = "MM/dd/yy"
     func textToDate(_ text: String?) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
         let str = text ?? ""
         let d = str.isEmpty ? Date().toFormat(dateFormat) : str
         guard let selectedDate = dateFormatter.date(from: d) else {
-            fatalError()
+            return Date()
         }
         return selectedDate
     }
@@ -36,8 +38,8 @@ class DatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         label?.text = labelText
-        value?.text = valueText == "" ? "Optional" : valueText
-        value?.textColor = valueText == "" ? .gray : value.textColor
+        value?.text = optional ? "Optional" : valueText
+        value?.textColor = .gray
         view.backgroundColor = .white
         let gesture = UITapGestureRecognizer(target: self, action: #selector (self.someAction (_:)))
         
@@ -46,14 +48,24 @@ class DatePickerViewController: UIViewController {
         
     }
     @objc func someAction(_ sender: UITapGestureRecognizer) {
-        
-        DatePickerPopover(title: self.labelText)
+        value?.textColor = .systemBlue
+        let datePicker = DatePickerPopover(title: self.labelText)
             .setSelectedDate(textToDate(value.text))
-            .setDoneButton(action: { _, selectedDate in
+            .setDoneButton { _, selectedDate in
+                self.value?.textColor = .gray
                 self.value.text = self.dateToText(selectedDate)
                 self.updateValue(selectedDate)
-            })
-            .appear(originView: sender.view!, baseViewController: self)
+            }
+            .setCancelButton { (_, _) in self.value.textColor = .gray }
+        if optional {
+            datePicker.setClearButton { (popover, _) in
+                self.value.text = "Optional"
+                self.value.textColor = .gray
+                popover.disappear()
+            }
+        }
+        datePicker.appear(originView: sender.view!, baseViewController: self)
+            
     }
 }
 
@@ -61,11 +73,13 @@ struct DatePicker: UIViewControllerRepresentable {
     let label: String
     @Binding var value: Date
     
+    var optional: Bool = false
     func makeUIViewController(context: UIViewControllerRepresentableContext<DatePicker>) -> UIViewController {
         let vc = DatePickerViewController()
         vc.labelText = label
+        vc.optional = self.optional
         let df = DateFormatter()
-        df.dateFormat = "MM/dd/yyyy"
+        df.dateFormat = "MM/dd/yy"
         vc.valueText = df.string(from: value)
         vc.updateValue = { date in
             self.value = date
@@ -74,7 +88,6 @@ struct DatePicker: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<DatePicker>) {
-        print("updated")
     }
     
     typealias UIViewControllerType = UIViewController
@@ -83,7 +96,7 @@ struct DatePicker: UIViewControllerRepresentable {
 }
 
 //extension DatePicker {
-//    init(label: String) {
+//    init(label: String, value: Bind) {
 //        self.label = label
 //        self.value = .constant(Date())
 //    }
