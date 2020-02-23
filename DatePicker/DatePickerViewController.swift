@@ -78,9 +78,9 @@ struct DatePicker: UIViewControllerRepresentable {
         let vc = DatePickerViewController()
         vc.labelText = label
         vc.optional = self.optional
-        if optional {
+        if optional && value == nil {
             vc.valueText = "Optional"
-        } else if !optional, let value = value{
+        } else if let value = value {
             vc.valueText = value.toFormat(DATE_FORMAT)
         } else if !optional && value == nil {
             vc.valueText = Date().toFormat(DATE_FORMAT)
