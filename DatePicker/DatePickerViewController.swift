@@ -10,7 +10,7 @@ import UIKit
 import SwiftyPickerPopover
 import SwiftUI
 import SwiftDate
-
+private let DATE_FORMAT = "MM/dd/yyyy"
 class DatePickerViewController: UIViewController {
     @IBOutlet var label: UILabel!
     var labelText: String!
@@ -21,12 +21,11 @@ class DatePickerViewController: UIViewController {
     var updateValue: (Date) -> Void = { _ in print("you didn't initialize updateValue!") }
     var clearValue: () -> Void = { print("you forgot to set clearValue!") }
     var optional: Bool = false
-    private let dateFormat: String = "MM/dd/yy"
     func textToDate(_ text: String?) -> Date {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = dateFormat
+        dateFormatter.dateFormat = DATE_FORMAT
         let str = text ?? ""
-        let d = str.isEmpty ? Date().toFormat(dateFormat) : str
+        let d = str.isEmpty ? Date().toFormat(DATE_FORMAT) : str
         guard let selectedDate = dateFormatter.date(from: d) else {
             return Date()
         }
@@ -34,7 +33,7 @@ class DatePickerViewController: UIViewController {
     }
 
     func dateToText(_ date: Date) -> String {
-        return date.toFormat(dateFormat)
+        return date.toFormat(DATE_FORMAT)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +72,7 @@ class DatePickerViewController: UIViewController {
 
 struct DatePicker: UIViewControllerRepresentable {
     let label: String
-    @Binding var value: String
-    
+    @Binding var value: Date?
     var optional: Bool = false
     func makeUIViewController(context: UIViewControllerRepresentableContext<DatePicker>) -> UIViewController {
         let vc = DatePickerViewController()
@@ -82,20 +80,20 @@ struct DatePicker: UIViewControllerRepresentable {
         vc.optional = self.optional
         if optional {
             vc.valueText = "Optional"
-        } else if !optional && value == "" {
-            vc.valueText = Date().toFormat("MM/dd/yy")
-            value = Date().toFormat("MM/dd/yy")
-        } else {
-            vc.valueText = value
+        } else if !optional, let value = value{
+            vc.valueText = value.toFormat(DATE_FORMAT)
+        } else if !optional && value == nil {
+            vc.valueText = Date().toFormat(DATE_FORMAT)
+            value = Date().dateAtStartOf(.day)
         }
         vc.clearValue = {
-            self.value = ""
+            self.value = nil
         }
         vc.updateValue = { date in
             let df = DateFormatter()
-            df.dateFormat = "MM/dd/yy"
+            df.dateFormat = DATE_FORMAT
             vc.valueText = df.string(from: date)
-            self.value = df.string(from: date)
+            self.value = date
         }
         return vc
     }
